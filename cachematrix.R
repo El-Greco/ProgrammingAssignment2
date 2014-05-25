@@ -1,9 +1,9 @@
-## The function "makeCacheMatrix" creates an object in the cahce and stores
+## The function "makeCacheMatrix" creates an object in the cahce and stores there
 ## the inverse of a matrix that was passed as an argument.
 ## The function "cacheSolve" calculates the inverse of a matrix from the first function.
 
 ## This first function takes a matrix and stores an object for it's inverse in the cache. 
-## If no argument is passed it creates an empty object. The function returns a list of subfunction.
+## If no argument is passed it creates an empty object. The function returns a list of subfunctions.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
         }
 
 # This subfunction can be called as a list item in order to replace the matrix
-# we last passed as argument. The matrix in the cache "m" is erased and
+# we last passed as an argument. The matrix in the cache "m" is erased and
 # variable "x" is overwritten by the new matrix.
 
         get <- function() x
@@ -32,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
         getsolve <- function() m
 
-#This subfunction returnes the contents of the cache.
+#This subfunction calls the contents of the cache.
 
         list(set = set, get = get,
              setsolve = setsolve,
